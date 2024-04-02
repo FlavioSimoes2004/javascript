@@ -37,6 +37,14 @@ console.log('middle' + ' ' + 'space');
 // Prints 'middle space'
 </pre>
 
+#### INTERPOLATION
+<pre>
+const myPet = 'armadillo';
+console.log(`I own a pet ${myPet}.`);
+// Output: I own a pet armadillo.
+</pre>
+Tem que começar com ser com ' e não com ".
+
 #### TAMANHO
 <pre>
 console.log('Hello'.length); // Prints 5
@@ -68,4 +76,40 @@ Já o 'Math.ceil()' pega um número decimal e arredonda ele para o inteiro <stro
 OUTRAS FUNÇÕES:
 <pre>
 console.log(Number.isInteger(2017));
+</pre>
+
+## VARIABLES
+Em 2015, houve uma atualização no javascript, onde acrescentou mais 2 keywords, o 'let' e 'const', para criar ou declarar variáveis. Antes disso,
+os programadores apenas podiam usar a keyword 'var' para declarar variáveis.
+<pre>
+var myName = 'Arya';
+console.log(myName);
+</pre>
+
+### let
+a keyword 'let' indica que aquela variável pode ter seu valor alterado.
+<pre>
+let meal = 'Enchiladas';
+console.log(meal); // Output: Enchiladas
+meal = 'Burrito';
+console.log(meal); // Output: Burrito
+</pre>
+
+### const
+É uma constante, uma variável que seu valor não pode ser alterado de forma alguma.
+<pre>
+const myName = 'Gilberto';
+console.log(myName); // Output: Gilberto
+</pre>
+
+### typeof operator
+<pre>
+const unknown1 = 'foo';
+console.log(typeof unknown1); // Output: string
+
+const unknown2 = 10;
+console.log(typeof unknown2); // Output: number
+
+const unknown3 = true; 
+console.log(typeof unknown3); // Output: boolean
 </pre>

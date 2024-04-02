@@ -113,3 +113,65 @@ console.log(typeof unknown2); // Output: number
 const unknown3 = true; 
 console.log(typeof unknown3); // Output: boolean
 </pre>
+
+## IS EQUAL OPERATOR
+Diferente de muitas linguagens, onde para comparar se uma variável é igual ou não usa o '==', no javascript usa-se '==='. O diferente do javascript é '!=='.
+
+## TRUTHY AND FALSY ASSIGNMENT
+### VARIABLE
+<pre>
+let myVariable = 'I Exist!';
+
+if (myVariable) {
+   console.log(myVariable)
+} else {
+   console.log('The variable does not exist.')
+}
+</pre>
+Para entrar nesse else, a variável tem que ter esses valores:
+- igual a 0
+- Strings vazia como: '' ou ""
+- igual a null
+- igual a undefined
+- NaN, not a number
+
+### SHORT-CIRCUIT EVALUATION
+<pre>
+let username = '';
+let defaultName;
+
+if (username) {
+  defaultName = username;
+} else {
+  defaultName = 'Stranger';
+}
+
+console.log(defaultName); // Prints: Stranger
+</pre>
+\
+OU
+<pre>
+let username = '';
+let defaultName = username || 'Stranger';
+
+console.log(defaultName); // Prints: Stranger
+</pre>
+
+## TERNARY OPERATOR
+DISSO
+<pre>
+let isNightTime = true;
+
+if (isNightTime) {
+  console.log('Turn on the lights!');
+} else {
+  console.log('Turn off the lights!');
+}
+</pre>
+\
+PRA ISSO
+<pre>
+isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+</pre>
+
+## FUNCTIONS

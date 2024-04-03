@@ -1,4 +1,5 @@
 # JAVASCRIPT
+Para executar um arquivo .js, precisa do Node.js e executar o comando: node fileName.js
 ## PRINT
 <pre>
 console.log("Hello World");
@@ -248,4 +249,78 @@ function monitorCount(rows, columns){
 }
 </pre>
 
-### ARROW FUNCTIONS
+## ARRAYS
+<pre>
+let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
+</pre>
+String também são arrays no javascript
+
+### PRINT
+Podemos printar um array fazendo:
+<pre>
+console.log(array);
+</pre>
+
+### REASSIGN ARRAY
+<pre>
+let array = [1, 2, 3];
+array = [4, 5, 6];
+console.log(array);
+</pre>
+
+### TAMANHO
+<pre>
+console.log(array.length);
+</pre>
+
+### .PUSH METHOD
+<pre>
+const itemTracker = ['item 0', 'item 1', 'item 2'];
+
+itemTracker.push('item 3', 'item 4');
+
+console.log(itemTracker); 
+// Output: ['item 0', 'item 1', 'item 2', 'item 3', 'item 4'];
+</pre>
+
+### .POP METHOD
+<pre>
+const newItemTracker = ['item 0', 'item 1', 'item 2'];
+
+const removed = newItemTracker.pop();
+
+console.log(newItemTracker); 
+// Output: [ 'item 0', 'item 1' ]
+console.log(removed);
+// Output: item 2
+</pre>
+
+### MORE METHODS
+#### .JOIN
+<pre>
+const gameObjects = ['rock', 'paper', 'scissors'];
+const joinNoSeparator = gameObjects.join();
+const joinWithSeparator = gameObjects.join(' + ');
+
+console.log('No separator: ', joinNoSeparator);
+console.log('With separator: ', joinWithSeparator);
+/*OUTPUT:
+No separator:  rock,paper,scissors
+With separator:  rock + paper + scissors*/
+</pre>
+
+#### .SHIFT
+Remove o primeiro elemento de um array
+<pre>
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift() //remove the first item from the array
+console.log(groceryList)
+</pre>
+
+#### .UNSHIFT
+Adiciona um elemento no início do array.
+<pre>
+groceryList.unshift('popcorn')
+console.log(groceryList)
+</pre>

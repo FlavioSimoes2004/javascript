@@ -410,3 +410,77 @@ do {
 
 console.log(countString);
 </pre>
+
+## ITERATORS
+### .FOREACH
+Vai executar o mesmo código para cada elemento do array.
+<pre>
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// Iterate over fruits below
+function print(item){
+  console.log('I want to eat a ' + item)
+}
+
+fruits.forEach(print)
+</pre>
+
+### .MAP
+retorna um novo array com as modificações feitas no corpo.
+<pre>
+const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
+
+// Create the secretMessage array below
+const secretMessage = animals.map(string => {
+  return string[0]
+})
+
+console.log(secretMessage.join('')); //prints HelloWorld
+</pre>
+
+### .FILTER
+Retorna um array com os elementos filtrados.
+<pre>
+const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
+
+const shortWords = words.filter(word => {
+  return word.length < 6;
+});
+// shortWords only have elements with less than six letters
+</pre>
+
+### .FINDINDEX
+Retorna apenas <strong>um</strong> index daquele elemento que for checado verdadeiro.
+<pre>
+const jumbledNums = [123, 25, 78, 5, 9]; 
+
+const lessThanTen = jumbledNums.findIndex(num => {
+  return num < 10;
+});
+</pre>
+
+### .REDUCE
+<pre>
+const numbers = [1, 2, 4, 10];
+
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+})
+
+console.log(summedNums) // Output: 17
+</pre>
+\
+OU
+<pre>
+const newNumbers = [1, 3, 5, 7];
+
+const newSum = newNumbers.reduce((accumulator, currentValue) => {
+  console.log('The value of accumulator: ', accumulator);
+  console.log('The value of currentValue: ', currentValue);
+  return accumulator + currentValue
+}, 10) //this number 10 is the start value of accumulator
+
+console.log(newSum)
+</pre>
+
+## OBJECTS

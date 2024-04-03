@@ -175,3 +175,77 @@ isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lig
 </pre>
 
 ## FUNCTIONS
+### FUNCTION DECLARATION
+A declaração de uma função consiste em:
+- a keyword 'function'
+- nome da função seguido de parenteses
+- e o corpo da função, que são os colchetes '{}'
+<!-- END OF LIST -->
+Exemplo:
+<pre>
+greetWorld(); // Output: Hello, World!
+
+function greetWorld() {
+  console.log('Hello, World!');
+}
+</pre>
+
+OU (FUNCTION EXPRESSION)
+
+<pre>
+const plantNeedsWater = function(day){
+  if(day === 'Wednesday')
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+</pre>
+
+OU (ARROW FUNCTION)
+
+<pre>
+const plantNeedsWater = (day) => {
+  if (day === 'Wednesday') {
+    return true;
+  } else {
+    return false;
+  }
+};
+</pre>
+
+OU (CONCISE BODY ARROW FUNCTION)
+
+<pre>
+const plantNeedsWater = day => day === 'Wednesday' ? true : false;
+</pre>
+
+### PARAMETERS
+<pre>
+function sayThanks(name) {
+  console.log('Thank you for your purchase '+ name + '! We appreciate your business.');
+}
+
+sayThanks('Cole');
+</pre>
+
+#### DEFAULT PARAMETERS
+<pre>
+function makeShoppingList(item1='milk', item2='bread', item3='eggs'){
+  console.log(`Remember to buy ${item1}`);
+  console.log(`Remember to buy ${item2}`);
+  console.log(`Remember to buy ${item3}`);
+}
+</pre>
+
+### RETURN
+<pre>
+function monitorCount(rows, columns){
+  return rows * columns;
+}
+</pre>
+
+### ARROW FUNCTIONS

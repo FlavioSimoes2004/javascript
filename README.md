@@ -249,6 +249,37 @@ function monitorCount(rows, columns){
 }
 </pre>
 
+### FUNCTION AS DATA
+<pre>
+const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => {
+  for(let i = 1; i <= 1000000; i++) {
+    if ( (2 + 2) != 4) {
+      console.log('Something has gone very wrong :( ');
+    }
+  }
+};
+
+// Write your code below
+const isTwoPlusTwo = checkThatTwoPlusTwoEqualsFourAMillionTimes
+isTwoPlusTwo()
+console.log(isTwoPlusTwo.name) //prints 'checkThatTwoPlusTwoEqualsFourAMillionTimes'
+</pre>
+
+### FUNCTIONS AS PARAMETERS
+<pre>
+const addTwo = num => {
+  return num + 2;
+}
+
+const checkConsistentOutput = (func, val) => {
+  let checkA = val + 2;
+  let checkB = func(val);
+  return checkA === checkB ? func(val) : 'inconsistent results';  
+}
+
+console.log(checkConsistentOutput(addTwo, 10));
+</pre>
+
 ## ARRAYS
 <pre>
 let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
@@ -323,4 +354,59 @@ Adiciona um elemento no início do array.
 <pre>
 groceryList.unshift('popcorn')
 console.log(groceryList)
+</pre>
+
+#### INDEXOF
+<pre>
+const pastaIndex = groceryList.indexOf('pasta');
+</pre>
+
+## ARRAYS AND FUNCTIONS
+<pre>
+const flowers = ['peony', 'daffodil', 'marigold'];
+
+function addFlower(arr) {
+  arr.push('lily');
+}
+
+addFlower(flowers);
+
+console.log(flowers); // Output: ['peony', 'daffodil', 'marigold', 'lily']
+</pre>
+
+## MATRIX
+<pre>
+numberClusters = [[1, 2], [3, 4], [5, 6]]
+const target = numberClusters[2][1]
+</pre>
+
+## LOOPS
+### FOR
+<pre>
+for (let counter = 0; counter < 4; counter++) {
+  console.log(counter);
+}
+</pre>
+
+### WHILE
+<pre>
+// A while loop that prints 1, 2, and 3
+let counterTwo = 1;
+while (counterTwo < 4) {
+  console.log(counterTwo);
+  counterTwo++;
+}
+</pre>
+
+### DO...WHILE
+<pre>
+let countString = '';
+let i = 0;
+
+do {
+  countString = countString + i;
+  i++;
+} while (i < 5);
+
+console.log(countString);
 </pre>

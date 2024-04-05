@@ -389,14 +389,22 @@ for (let counter = 0; counter < 4; counter++) {
 </pre>
 
 ### WHILE
-<pre>
+```javascript
 // A while loop that prints 1, 2, and 3
 let counterTwo = 1;
 while (counterTwo < 4) {
   console.log(counterTwo);
   counterTwo++;
 }
-</pre>
+```
+\
+OU
+```javascript
+const array = [10, 20, 30, 40, 90];
+for(let num in array){
+    console.log(array[num])
+}
+```
 
 ### DO...WHILE
 <pre>
@@ -539,6 +547,7 @@ delete spaceship.mission;  // Removes the mission property
 ```
 
 ### METHODS
+Podemos colocar funções dentro desses objetos e também podemos usar os objetos como parâmetros para funções.
 ```javascript
 const alienShip = {
   invade: function () { 
@@ -594,4 +603,59 @@ const spaceship = {
 ```javascript
 spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium'
 const capFave = spaceship.crew.captain['favorite foods'][0]
+```
+
+### PASS-BY-REFERENCES
+```javascript
+let paintIt = obj => {
+  obj.color = 'glorious gold'
+};
+ 
+paintIt(spaceship); //set or changes the color property to 'glorious gold'
+```
+
+### LOOPING THROUGH OBJECTS
+```javascript
+let spaceship = {
+  crew: {
+    captain: { 
+      name: 'Lily', 
+      degree: 'Computer Engineering', 
+      cheerTeam() { console.log('You got this!') } 
+    },
+    'chief officer': { 
+      name: 'Dan', 
+      degree: 'Aerospace Engineering', 
+      agree() { console.log('I agree, captain!') } 
+    },
+    medic: { 
+      name: 'Clementine', 
+      degree: 'Physics', 
+      announce() { console.log(`Jets on!`) } },
+    translator: {
+      name: 'Shauna', 
+      degree: 'Conservation Science', 
+      powerFuel() { console.log('The tank is full!') } 
+    }
+  }
+}; 
+
+// for...in
+for (let crewMember in spaceship.crew) {
+  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
+}
+```
+
+## ADVANCED OBJECTS
+### THIS
+```javascript
+const robot = {
+  model: '1E78V2',
+  energyLevel: 100,
+  provideInfo(){
+    return `I am ${this.model} and my current energy level is ${this.energyLevel}.`
+  }
+};
+
+console.log(robot.provideInfo())
 ```

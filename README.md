@@ -638,7 +638,7 @@ let spaceship = {
       powerFuel() { console.log('The tank is full!') } 
     }
   }
-}; 
+};
 
 // for...in
 for (let crewMember in spaceship.crew) {

@@ -484,3 +484,114 @@ console.log(newSum)
 </pre>
 
 ## OBJECTS
+```javascript
+const ship = {
+  numCrew: 10,
+  'The Ship Captain': 'I DONT KNOW'
+};
+```
+
+### ACESSAR ATRIBUTOS
+```javascript
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver'
+};
+spaceship.homePlanet; // Returns 'Earth',
+spaceship.color; // Returns 'silver',
+```
+\
+OU
+```javascript
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  'Active Mission' : true,
+  homePlanet : 'Earth', 
+  numCrew: 5
+ };
+
+let isActive = spaceship['Active Mission']
+console.log(spaceship['Active Mission'])
+```
+
+### ADICIONAR PROPRIEDADE
+```javascript
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+
+spaceship.color = 'glorious gold'
+spaceship.numEngines = 7 //Added property numEngines
+```
+
+### DELETAR PROPRIEDADE
+```javascript
+const spaceship = {
+  'Fuel Type': 'Turbo Fuel',
+  homePlanet: 'Earth',
+  mission: 'Explore the universe' 
+};
+ 
+delete spaceship.mission;  // Removes the mission property
+```
+
+### METHODS
+```javascript
+const alienShip = {
+  invade: function () { 
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+```
+\
+OU
+```javascript
+const seila = {
+    opa(){
+        console.log("Joao is gay")
+    }
+};
+
+seila.opa()
+```
+
+### OBJECTS INSIDE OBJECT
+```javascript
+const spaceship = {
+     telescope: {
+        yearBuilt: 2018,
+        model: '91031-XLT',
+        focalLength: 2032 
+     },
+    crew: {
+        captain: { 
+            name: 'Sandra', 
+            degree: 'Computer Engineering', 
+            encourageTeam() { console.log('We got this!') },
+            'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+         }
+    },
+    engine: {
+        model: 'Nimbus2000'
+     },
+     nanoelectronics: {
+         computer: {
+            terabytes: 100,
+            monitors: 'HD'
+         },
+        'back-up': {
+           battery: 'Lithium',
+           terabytes: 50
+         }
+    }
+};
+```
+
+#### ACESSING OBJECTS INSIDE OBJECT
+```javascript
+spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium'
+const capFave = spaceship.crew.captain['favorite foods'][0]
+```

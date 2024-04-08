@@ -659,3 +659,124 @@ const robot = {
 
 console.log(robot.provideInfo())
 ```
+
+#### ARROW FUNCTIONS
+```javascript
+const goat = {
+  dietType: 'herbivore',
+  makeSound() {
+    console.log('baaa');
+  },
+  diet: () => {
+    console.log(this.dietType);
+  }
+};
+
+goat.diet(); // Prints undefined
+```
+
+### PRIVACY
+Javascript não tem variáveis private, então para dizer que uma variável não pode ser alterada, usa-se '_' antes do nome da variável.
+Isso só serve para dizer ao desenvolvedor que a variável não deve ser alterada.
+```javascript
+const bankAccount = {
+  _amount: 1000
+}
+```
+
+### GETTERS
+```javascript
+const person = {
+  _firstName: 'John',
+  _lastName: 'Doe',
+  get fullName() {
+    if (this._firstName && this._lastName){
+      return `${this._firstName} ${this._lastName}`;
+    } else {
+      return 'Missing a first name or a last name.';
+    }
+  }
+}
+
+// To call the getter method: 
+person.fullName; // 'John Doe'
+```
+
+### SETTERS
+```javascript
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  _numOfSensors: 15,
+  get numOfSensors(){
+    if(typeof this._numOfSensors === 'number'){
+      return this._numOfSensors;
+    } else {
+      return 'Sensors are currently down.'
+    }
+  },
+  set numOfSensors(num){
+    if(typeof num == 'number' && num >= 0){
+      this._numOfSensors = num
+    }
+    else
+    {
+      console.log('Pass in a number that is greater than or equal to 0')
+    }
+  }
+};
+
+robot.numOfSensors = 100
+console.log(robot.numOfSensors)
+```
+
+### FACTORY FUNCTIONS
+Tem vezes que precisamos várias instancias de um objeto rapidamente, é aqui que as funções de fábrica entram.
+```javascript
+const robotFactory = (model, mobile) => {
+  return {
+    model: model,
+    mobile: mobile,
+    beep(){
+      console.log('Beep Boop')
+    }
+  }
+}
+
+const tinCan = robotFactory('P-500', true)
+tinCan.beep()
+```
+OU
+```javascript
+const robotFactory = (model, mobile) => {
+  return {
+    model,
+    mobile,
+    beep() {
+      console.log('Beep Boop');
+    }
+  }
+}
+```
+
+### Destructured Assignment
+```javascript
+const robot = {
+  model: '1E78V2',
+  energyLevel: 100,
+  functionality: {
+    beep() {
+      console.log('Beep Boop');
+    },
+    fireLaser() {
+      console.log('Pew Pew');
+    },
+  }
+};
+
+const {functionality} = robot //its the same like robot.functionality
+functionality.beep()
+```
+
+### BUILT-IN METHODS
+Um objeto também já vem com métodos, como o .valueOf, .entries(), etc.
